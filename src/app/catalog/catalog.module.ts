@@ -4,10 +4,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { TableRoutingModule } from './table-routing.module';
+import { TableRoutingModule } from './catalog-routing.module';
 
 import { NgbdSortableHeader } from './sortable.directive';
-import { NgbdTable } from './table.component';
+import { NgbdCatalog } from './catalog.component';
 
 @NgModule({
   imports: [
@@ -18,8 +18,8 @@ import { NgbdTable } from './table.component';
     TableRoutingModule,
     NgbModule
   ],
-  declarations: [NgbdTable, NgbdSortableHeader],
-  exports: [NgbdTable],
-  bootstrap: [NgbdTable]
+  declarations: [NgbdCatalog, NgbdSortableHeader],
+  exports: [NgbdCatalog],
+  bootstrap: [NgbdCatalog]
 })
-export class NgbdTableModule {}
+export class NgbdCatalogModule {}

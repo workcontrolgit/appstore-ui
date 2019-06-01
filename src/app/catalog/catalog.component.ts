@@ -8,9 +8,9 @@ import {NgbdSortableHeader, SortEvent} from './sortable.directive';
 
 
 @Component(
-    {selector: 'ngbd-table', templateUrl: './table.component.html',
-    styleUrls: ['./table.component.scss'] , providers: [CountryService, DecimalPipe]})
-export class NgbdTable {
+    {selector: 'ngbd-catalog', templateUrl: './catalog.component.html',
+    styleUrls: ['./catalog.component.scss'] , providers: [CountryService, DecimalPipe]})
+export class NgbdCatalog {
   countries$: Observable<Country[]>;
   total$: Observable<number>;
 

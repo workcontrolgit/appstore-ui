@@ -1,4 +1,4 @@
-# tablesearch
+# App Store Catalog
 
 This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
 version 6.1.0

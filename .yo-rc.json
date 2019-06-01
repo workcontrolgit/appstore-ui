@@ -1,0 +1,23 @@
+{
+  "generator-ngx-rocket": {
+    "version": "6.1.0",
+    "props": {
+      "location": "path",
+      "appName": "tablesearch",
+      "target": [
+        "web"
+      ],
+      "pwa": true,
+      "ui": "bootstrap",
+      "auth": true,
+      "lazy": false,
+      "angulartics": false,
+      "tools": [],
+      "utility": [],
+      "projectName": "tablesearch",
+      "packageManager": "npm",
+      "mobile": [],
+      "desktop": []
+    }
+  }
+}

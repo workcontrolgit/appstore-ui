@@ -2,7 +2,7 @@
 
 <form>
   <div class="form-group form-inline">
-      Full text search: <input class="form-control ml-2" type="text" name="searchTerm" placeholder="enter criteria here" [(ngModel)]="service.searchTerm"/>
+      Full text search: <input class="form-control ml-2" type="text" name="searchTerm" placeholder="criteria here" [(ngModel)]="service.searchTerm"/>
       <span class="ml-3" *ngIf="service.loading$ | async">Loading...</span>
   </div>
 

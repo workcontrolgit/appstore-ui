@@ -36,16 +36,10 @@ function sort(catalogitems: CatalogItem[], column: string, direction: string): C
   }
 }
 
-// function matches(country: CatalogItem, term: string, pipe: PipeTransform) {
-//   return country.name.toLowerCase().includes(term)
-//     || pipe.transform(country.area).includes(term)
-//     || pipe.transform(country.population).includes(term);
-// }
-
-function matches(country: CatalogItem, term: string, pipe: PipeTransform) {
-  return country.name.toLowerCase().includes(term)
-    || country.area.toLowerCase().includes(term)
-    || country.population.toLowerCase().includes(term);
+function matches(item: CatalogItem, term: string, pipe: PipeTransform) {
+  return item.name.toLowerCase().includes(term)
+    || item.description.toLowerCase().includes(term)
+    || item.category.toLowerCase().includes(term);
 }
 
 @Injectable({providedIn: 'root'})
@@ -103,7 +97,7 @@ export class CatalogItemService {
     let catalogitems = sort(CatalogItems, sortColumn, sortDirection);
 
     // 2. filter
-    catalogitems = catalogitems.filter(country => matches(country, searchTerm, this.pipe));
+    catalogitems = catalogitems.filter(item => matches(item, searchTerm, this.pipe));
     const total = catalogitems.length;
 
     // 3. paginate

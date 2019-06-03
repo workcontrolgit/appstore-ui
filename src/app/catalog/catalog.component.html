@@ -11,22 +11,20 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col" sortable="name" (sort)="onSort($event)">Name</th>
-      <th scope="col" sortable="area" (sort)="onSort($event)">Descripton</th>
-      <th scope="col" sortable="population" (sort)="onSort($event)">Category</th>
+      <th scope="col" sortable="description" (sort)="onSort($event)">Descripton</th>
+      <th scope="col" sortable="category" (sort)="onSort($event)">Category</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let country of catalogitems$ | async">
-      <th scope="row">{{ country.id }}</th>
+    <tr *ngFor="let item of catalogitems$ | async">
+      <th scope="row">{{ item.id }}</th>
       <td>
-        <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.icon" class="mr-2" style="width: 20px">
-        <ngb-highlight [result]="country.name" [term]="service.searchTerm"></ngb-highlight>
+        <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + item.icon" class="mr-2" style="width: 20px">
+        <ngb-highlight [result]="item.name" [term]="service.searchTerm"></ngb-highlight>
       </td>
-      <td><ngb-highlight [result]="country.area" [term]="service.searchTerm"></ngb-highlight></td>
-      <td><ngb-highlight [result]="country.population" [term]="service.searchTerm"></ngb-highlight></td>
+      <td><ngb-highlight [result]="item.description" [term]="service.searchTerm"></ngb-highlight></td>
+      <td><ngb-highlight [result]="item.category" [term]="service.searchTerm"></ngb-highlight></td>
       
-      <!-- <td><ngb-highlight [result]="country.area | number" [term]="service.searchTerm"></ngb-highlight></td>
-      <td><ngb-highlight [result]="country.population | number" [term]="service.searchTerm"></ngb-highlight></td> -->
     </tr>
     </tbody>
   </table>

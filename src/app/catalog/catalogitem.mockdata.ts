@@ -6,7 +6,7 @@ export const CatalogItems: CatalogItem[] = [
     name: 'ACRS',
     icon: 'f/f3/Flag_of_Russia.svg',
     description: 'Automated Classification and Recruitment Solution',
-    category: 'Position Classification/ Recruiting/ Hiring'
+    category: 'Position Classification, Recruiting, Hiring'
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const CatalogItems: CatalogItem[] = [
     name: 'GADTRK',
     icon: 'b/ba/Flag_of_Germany.svg',
     description: 'Grievance Appeals and Disciplinary Actions Tracking System',
-    category: 'Employee Labor Relations/ Reasonable Accommodations'
+    category: 'Employee Labor Relations, Reasonable Accommodations'
   },
   {
     id: 4,
@@ -55,41 +55,41 @@ export const CatalogItems: CatalogItem[] = [
     name: 'EAPS',
     icon: 'f/fc/Flag_of_Mexico.svg',
     description: 'Executive Agency Personnel Support',
-    category: 'Workforce Planning/ Analytics'
+    category: 'Workforce Planning, Analytics'
   },
   {
     id: 9,
     name: 'REETA',
     icon: 'a/a4/Flag_of_the_United_States.svg',
-    description: '9629091',
-    category: '324459463'
+    description: 'Recruitment Examination Evaluation Tracking Application',
+    category: 'Position Classification, Recruiting, Hiring'
   },
   {
     id: 10,
     name: 'MCLASS',
     icon: '4/41/Flag_of_India.svg',
-    description: '3287263',
-    category: '1324171354'
+    description: 'Mission Classification',
+    category: 'Position Classification, Recruiting, Hiring'
   },
   {
     id: 11,
-    name: 'Student Loan Repayment',
+    name: 'SLRP',
     icon: '9/9f/Flag_of_Indonesia.svg',
-    description: '1910931',
-    category: '263991379'
+    description: 'Student Loan Repayment Program',
+    category: 'Benefits, Retirement'
   },
   {
     id: 12,
-    name: 'HRSAR',
+    name: 'TIC/TIS',
     icon: '3/38/Flag_of_Tuvalu.svg',
-    description: '26',
-    category: '11097'
+    description: 'Time-in-Class / Time-in-Service',
+    category: 'Performance Management'
   },
   {
     id: 13,
-    name: 'Employee Profile',
+    name: 'EP',
     icon: 'f/fa/Flag_of_the_People%27s_Republic_of_China.svg',
-    description: '9596960',
-    category: '1409517397'
+    description: 'Employee Profile',
+    category: 'Personnel Actions'
   }
 ];

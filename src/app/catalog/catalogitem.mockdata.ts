@@ -5,57 +5,57 @@ export const CatalogItems: CatalogItem[] = [
     id: 1,
     name: 'ACRS',
     icon: 'f/f3/Flag_of_Russia.svg',
-    description: 'application description',
-    category: 'application category'
+    description: 'Automated Classification and Recruitment Solution',
+    category: 'Position Classification/ Recruiting/ Hiring'
   },
   {
     id: 2,
-    name: 'GADTK',
+    name: 'ERP',
     icon: 'c/c3/Flag_of_France.svg',
-    description: '640679',
-    category: '64979548'
+    description: 'Employee Retirement Portal',
+    category: 'Benefits/ Retirement'
   },
   {
     id: 3,
-    name: 'GEMS',
+    name: 'GADTRK',
     icon: 'b/ba/Flag_of_Germany.svg',
-    description: '357114',
-    category: '82114224'
+    description: 'Grievance Appeals and Disciplinary Actions Tracking System',
+    category: 'Employee Labor Relations/ Reasonable Accommodations'
   },
   {
     id: 4,
-    name: 'OPS',
+    name: 'BATS',
     icon: '5/5c/Flag_of_Portugal.svg',
-    description: '92090',
-    category: '10329506'
+    description: 'Budget Allocations Tracking System',
+    category: 'Enterprise Support'
   },
   {
     id: 5,
-    name: 'FSBID',
+    name: 'BMA',
     icon: 'c/cf/Flag_of_Canada.svg',
-    description: '9976140',
-    category: '36624199'
+    description: 'BMA',
+    category: 'Performance Management'
   },
   {
     id: 6,
-    name: 'Travel Voucher',
+    name: 'GEMS',
     icon: '2/21/Flag_of_Vietnam.svg',
-    description: '331212',
-    category: '95540800'
+    description: 'GEMS',
+    category: 'Personnel Actions'
   },
   {
     id: 7,
-    name: 'EMS',
+    name: 'PCS TV',
     icon: '0/05/Flag_of_Brazil.svg',
-    description: '8515767',
-    category: '209288278'
+    description: 'PCS Travel Claim System',
+    category: 'Travel'
   },
   {
     id: 8,
-    name: 'KC',
+    name: 'EAPS',
     icon: 'f/fc/Flag_of_Mexico.svg',
-    description: '1964375',
-    category: '129163276'
+    description: 'Executive Agency Personnel Support',
+    category: 'Workforce Planning/ Analytics'
   },
   {
     id: 9,

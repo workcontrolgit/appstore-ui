@@ -2,14 +2,14 @@ import {Injectable, PipeTransform} from '@angular/core';
 
 import {BehaviorSubject, Observable, of, Subject} from 'rxjs';
 
-import {Country} from './country';
-import {COUNTRIES} from './countries';
+import {CatalogItem} from './catalogitem.model';
+import {CatalogItems} from './catalogitem.mockdata';
 import {DecimalPipe} from '@angular/common';
 import {debounceTime, delay, switchMap, tap} from 'rxjs/operators';
 import {SortDirection} from './sortable.directive';
 
 interface SearchResult {
-  countries: Country[];
+  catalogitems: CatalogItem[];
   total: number;
 }
 
@@ -25,28 +25,34 @@ function compare(v1: any, v2: any) {
   return v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
 }
 
-function sort(countries: Country[], column: string, direction: string): Country[] {
+function sort(catalogitems: CatalogItem[], column: string, direction: string): CatalogItem[] {
   if (direction === '') {
-    return countries;
+    return catalogitems;
   } else {
-    return [...countries].sort((a, b) => {
+    return [...catalogitems].sort((a, b) => {
       const res = compare(a[column], b[column]);
       return direction === 'asc' ? res : -res;
     });
   }
 }
 
-function matches(country: Country, term: string, pipe: PipeTransform) {
+// function matches(country: CatalogItem, term: string, pipe: PipeTransform) {
+//   return country.name.toLowerCase().includes(term)
+//     || pipe.transform(country.area).includes(term)
+//     || pipe.transform(country.population).includes(term);
+// }
+
+function matches(country: CatalogItem, term: string, pipe: PipeTransform) {
   return country.name.toLowerCase().includes(term)
-    || pipe.transform(country.area).includes(term)
-    || pipe.transform(country.population).includes(term);
+    || country.area.toLowerCase().includes(term)
+    || country.population.toLowerCase().includes(term);
 }
 
 @Injectable({providedIn: 'root'})
-export class CountryService {
+export class CatalogItemService {
   private _loading$ = new BehaviorSubject<boolean>(true);
   private _search$ = new Subject<void>();
-  private _countries$ = new BehaviorSubject<Country[]>([]);
+  private _catalogitems$ = new BehaviorSubject<CatalogItem[]>([]);
   private _total$ = new BehaviorSubject<number>(0);
 
   private _state: State = {
@@ -65,14 +71,14 @@ export class CountryService {
       delay(200),
       tap(() => this._loading$.next(false))
     ).subscribe(result => {
-      this._countries$.next(result.countries);
+      this._catalogitems$.next(result.catalogitems);
       this._total$.next(result.total);
     });
 
     this._search$.next();
   }
 
-  get countries$() { return this._countries$.asObservable(); }
+  get catalogitems$() { return this._catalogitems$.asObservable(); }
   get total$() { return this._total$.asObservable(); }
   get loading$() { return this._loading$.asObservable(); }
   get page() { return this._state.page; }
@@ -94,14 +100,14 @@ export class CountryService {
     const {sortColumn, sortDirection, pageSize, page, searchTerm} = this._state;
 
     // 1. sort
-    let countries = sort(COUNTRIES, sortColumn, sortDirection);
+    let catalogitems = sort(CatalogItems, sortColumn, sortDirection);
 
     // 2. filter
-    countries = countries.filter(country => matches(country, searchTerm, this.pipe));
-    const total = countries.length;
+    catalogitems = catalogitems.filter(country => matches(country, searchTerm, this.pipe));
+    const total = catalogitems.length;
 
     // 3. paginate
-    countries = countries.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
-    return of({countries, total});
+    catalogitems = catalogitems.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+    return of({catalogitems, total});
   }
 }

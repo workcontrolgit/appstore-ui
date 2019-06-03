@@ -2,7 +2,7 @@
 
 <form>
   <div class="form-group form-inline">
-      Full text search: <input class="form-control ml-2" type="text" name="searchTerm" placeholder="name, category, etc." [(ngModel)]="service.searchTerm"/>
+      Full text search: <input class="form-control ml-2" type="text" name="searchTerm" placeholder="enter criteria here" [(ngModel)]="service.searchTerm"/>
       <span class="ml-3" *ngIf="service.loading$ | async">Loading...</span>
   </div>
 
@@ -16,14 +16,17 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let country of countries$ | async">
+    <tr *ngFor="let country of catalogitems$ | async">
       <th scope="row">{{ country.id }}</th>
       <td>
-        <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="mr-2" style="width: 20px">
+        <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.icon" class="mr-2" style="width: 20px">
         <ngb-highlight [result]="country.name" [term]="service.searchTerm"></ngb-highlight>
       </td>
-      <td><ngb-highlight [result]="country.area | number" [term]="service.searchTerm"></ngb-highlight></td>
-      <td><ngb-highlight [result]="country.population | number" [term]="service.searchTerm"></ngb-highlight></td>
+      <td><ngb-highlight [result]="country.area" [term]="service.searchTerm"></ngb-highlight></td>
+      <td><ngb-highlight [result]="country.population" [term]="service.searchTerm"></ngb-highlight></td>
+      
+      <!-- <td><ngb-highlight [result]="country.area | number" [term]="service.searchTerm"></ngb-highlight></td>
+      <td><ngb-highlight [result]="country.population | number" [term]="service.searchTerm"></ngb-highlight></td> -->
     </tr>
     </tbody>
   </table>

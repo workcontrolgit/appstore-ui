@@ -5,7 +5,7 @@
         Full text search: <input class="form-control ml-2" type="text" name="searchTerm" placeholder="criteria in lower case" [(ngModel)]="service.searchTerm"/>
         <span class="ml-3" *ngIf="service.loading$ | async">Loading...</span>
     </div>
-  
+<div class="table-responsive-sm">  
     <table class="table table-hover">
       <thead>
       <tr>
@@ -28,6 +28,7 @@
       </tr>
       </tbody>
     </table>
+</div>
   
     <div class="d-flex justify-content-between p-2">
       <ngb-pagination

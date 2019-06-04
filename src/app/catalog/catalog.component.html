@@ -1,45 +1,56 @@
 <div class="container-fluid">
 
-<form>
-  <div class="form-group form-inline">
-      Full text search: <input class="form-control ml-2" type="text" name="searchTerm" placeholder="criteria in lower case" [(ngModel)]="service.searchTerm"/>
-      <span class="ml-3" *ngIf="service.loading$ | async">Loading...</span>
-  </div>
-
-  <table class="table table-striped">
-    <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col" sortable="name" (sort)="onSort($event)">Name</th>
-      <th scope="col" sortable="description" (sort)="onSort($event)">Descripton</th>
-      <th scope="col" sortable="category" (sort)="onSort($event)">Category</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let item of catalogitems$ | async">
-      <th scope="row">{{ item.id }}</th>
-      <td>
-        <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + item.icon" class="mr-2" style="width: 20px">
-        <ngb-highlight [result]="item.name" [term]="service.searchTerm"></ngb-highlight>
-      </td>
-      <td><ngb-highlight [result]="item.description" [term]="service.searchTerm"></ngb-highlight></td>
-      <td><ngb-highlight [result]="item.category" [term]="service.searchTerm"></ngb-highlight></td>
-      
-    </tr>
-    </tbody>
-  </table>
-
-  <div class="d-flex justify-content-between p-2">
-    <ngb-pagination
-      [collectionSize]="total$ | async" [(page)]="service.page" [pageSize]="service.pageSize">
-    </ngb-pagination>
-
-    <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
-      <option [ngValue]="2">2 items per page</option>
-      <option [ngValue]="4">4 items per page</option>
-      <option [ngValue]="6">6 items per page</option>
-    </select>
-  </div>
-
-</form>
+    <div class="card">
+        <div class="card-header">
+            HR Application Catalog
+        </div>
+        <div class="card-body">
+          <form>
+              <div class="form-group form-inline">
+                  Full text search: <input class="form-control ml-2" type="text" name="searchTerm" placeholder="criteria in lower case" [(ngModel)]="service.searchTerm"/>
+                  <span class="ml-3" *ngIf="service.loading$ | async">Loading...</span>
+              </div>
+            
+              <table class="table table-hover">
+                <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col" sortable="name" (sort)="onSort($event)">Name</th>
+                  <th scope="col" sortable="description" (sort)="onSort($event)">Description</th>
+                  <th scope="col" sortable="category" (sort)="onSort($event)">Category</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of catalogitems$ | async">
+                  <th scope="row">{{ item.id }}</th>
+                  <td (click)="open(item)">
+                    <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + item.icon" class="mr-2" style="width: 20px">
+                    <ngb-highlight [result]="item.name" [term]="service.searchTerm"></ngb-highlight>
+                  </td>
+                  <td><ngb-highlight [result]="item.description" [term]="service.searchTerm"></ngb-highlight></td>
+                  <td><ngb-highlight [result]="item.category" [term]="service.searchTerm"></ngb-highlight></td>
+                  
+                </tr>
+                </tbody>
+              </table>
+            
+              <div class="d-flex justify-content-between p-2">
+                <ngb-pagination
+                  [collectionSize]="total$ | async" [(page)]="service.page" [pageSize]="service.pageSize">
+                </ngb-pagination>
+            
+                <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
+                  <option [ngValue]="2">2 items per page</option>
+                  <option [ngValue]="4">4 items per page</option>
+                  <option [ngValue]="6">6 items per page</option>
+                </select>
+              </div>
+            
+            </form>
+            
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Help - Click on column header to sort.  Click on application logo or name to launch the application.</small>
+          </div>        
+      </div>
 </div>

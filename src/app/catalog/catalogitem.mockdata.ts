@@ -13,7 +13,7 @@ export const CatalogItems: CatalogItem[] = [
     name: 'ERP',
     icon: 'c/c3/Flag_of_France.svg',
     description: 'Employee Retirement Portal',
-    category: 'Benefits/ Retirement'
+    category: 'Benefits, Retirement'
   },
   {
     id: 3,

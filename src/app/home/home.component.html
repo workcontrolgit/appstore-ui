@@ -1,18 +1,24 @@
 <div class="container-fluid">
-  <div class="jumbotron text-center">
+  <!-- <div class="jumbotron text-center">
     <h1>
       <img class="logo" src="assets/ngx-rocket-logo.png" alt="angular logo"/>
-      <span translate>Welcome to HR App Catalog !</span>
+      <span translate>Welcome to HR IPMS!</span>
     </h1>
     <app-loader [isLoading]="isLoading"></app-loader>
     <q [hidden]="isLoading">{{quote}}</q>   
+  </div> -->
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">What is IPMS?</h5>
+      <p class="card-text">The IPMS (Integrated Personnel Management System) is a robust suite of applications designed
+        and developed by HR Bureau to handle recruitment, assignment evaluation, promotion, discipline, career
+        development, and retirement policies and programs for the State Department's Foreign Service and Civil Service
+        employees.  Readily customized, individual applications can be extended to meet customer
+        requirements and to integrate with Commercial-Off-The-Shelf (COTS) products and other Bureaus IT systems and
+        applications.</p>
+      <a class="btn btn-primary" routerLink="/catalog" routerLinkActive="active" role="button">HR Application Catalog
+        <i class="fa fa-angle-double-right"></i></a>
+    </div>
   </div>
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Integrated Personnel Management System (IPMS)</h5>
-    <p class="card-text">The IPMS consists of following pillars: HR Online, GEMS, OPS, EAPS and Knowledget Center (KC).</p>
-    <a class="btn btn-primary" routerLink="/catalog" routerLinkActive="active" role="button">Visit Application Catalog <i class="fa fa-angle-double-right"></i></a>
-  </div>
-</div>    
-  
+
 </div>

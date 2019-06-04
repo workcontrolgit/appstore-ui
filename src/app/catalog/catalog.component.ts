@@ -64,7 +64,7 @@ export class NgbdCatalog {
   //   }
 
     open(item:any) {
-      const modalRef = this.modalService.open(NgbdModalContent);
+      const modalRef = this.modalService.open(NgbdModalContent, { size: 'sm' });
       modalRef.componentInstance.name = item.name;
     }    
 

@@ -26,7 +26,7 @@ export const CatalogItems: CatalogItem[] = [
     id: 4,
     name: 'BATS',
     icon: '5/5c/Flag_of_Portugal.svg',
-    description: 'Baby Advice Tracking System',
+    description: 'Baby Advices Translation System',
     category: 'Enterprise Support'
   },
   {

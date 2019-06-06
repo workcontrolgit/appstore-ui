@@ -5,35 +5,35 @@ export const CatalogItems: CatalogItem[] = [
     id: 1,
     name: 'ACRS',
     icon: 'f/f3/Flag_of_Russia.svg',
-    description: 'Atom Classification and Receipt System',
+    description: 'Addiction Classification and Reflective System',
     category: 'Position Classification, Recruiting, Hiring'
   },
   {
     id: 2,
     name: 'ERP',
     icon: 'c/c3/Flag_of_France.svg',
-    description: 'Extraterrestrial Research Portal',
+    description: 'Earwax Research Portal',
     category: 'Benefits, Retirement'
   },
   {
     id: 3,
     name: 'GADTRK',
     icon: 'b/ba/Flag_of_Germany.svg',
-    description: 'Grand Appeals and Decision Actions Tracking System',
+    description: 'Glucose Appeals and Decision Actions Tracking System',
     category: 'Employee Labor Relations, Reasonable Accommodations'
   },
   {
     id: 4,
     name: 'BATS',
     icon: '5/5c/Flag_of_Portugal.svg',
-    description: 'Bomb Allocation Tracking System',
+    description: 'Baby Advice Tracking System',
     category: 'Enterprise Support'
   },
   {
     id: 5,
     name: 'BMA',
     icon: 'c/cf/Flag_of_Canada.svg',
-    description: 'Bazuka Marketing Association',
+    description: 'Bandage Marketing Association',
     category: 'Performance Management'
   },
   {
@@ -47,7 +47,7 @@ export const CatalogItems: CatalogItem[] = [
     id: 7,
     name: 'PCS TV',
     icon: '0/05/Flag_of_Brazil.svg',
-    description: 'Prime Control Space Travel Vehicle',
+    description: 'Pacemaker Control Safe Transfer Vehicle',
     category: 'Travel'
   },
   {
@@ -68,14 +68,14 @@ export const CatalogItems: CatalogItem[] = [
     id: 10,
     name: 'MCLASS',
     icon: '4/41/Flag_of_India.svg',
-    description: 'Missle Classification',
+    description: 'Macaroni Classification',
     category: 'Position Classification, Recruiting, Hiring'
   },
   {
     id: 11,
     name: 'SLRP',
     icon: '9/9f/Flag_of_Indonesia.svg',
-    description: 'Space Logistics Realignment Program',
+    description: 'Sanitation Logistics Research Program',
     category: 'Benefits, Retirement'
   },
   {

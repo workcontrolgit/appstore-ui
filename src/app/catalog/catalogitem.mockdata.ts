@@ -5,14 +5,14 @@ export const CatalogItems: CatalogItem[] = [
     id: 1,
     name: 'ACRS',
     icon: 'f/f3/Flag_of_Russia.svg',
-    description: 'Atomic Classification and Recreation Solution',
+    description: 'Atom Classification and Receipt System',
     category: 'Position Classification, Recruiting, Hiring'
   },
   {
     id: 2,
     name: 'ERP',
     icon: 'c/c3/Flag_of_France.svg',
-    description: 'Extraterrestrial Retirement Portal',
+    description: 'Extraterrestrial Research Portal',
     category: 'Benefits, Retirement'
   },
   {
@@ -26,14 +26,14 @@ export const CatalogItems: CatalogItem[] = [
     id: 4,
     name: 'BATS',
     icon: '5/5c/Flag_of_Portugal.svg',
-    description: 'Bomb Allocations Tracking System',
+    description: 'Bomb Allocation Tracking System',
     category: 'Enterprise Support'
   },
   {
     id: 5,
     name: 'BMA',
     icon: 'c/cf/Flag_of_Canada.svg',
-    description: 'Business Marketing Association',
+    description: 'Bazuka Marketing Association',
     category: 'Performance Management'
   },
   {
@@ -47,7 +47,7 @@ export const CatalogItems: CatalogItem[] = [
     id: 7,
     name: 'PCS TV',
     icon: '0/05/Flag_of_Brazil.svg',
-    description: 'Personnel Control Space Travel Vehicle',
+    description: 'Prime Control Space Travel Vehicle',
     category: 'Travel'
   },
   {

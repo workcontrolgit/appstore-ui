@@ -5,7 +5,7 @@ export const CatalogItems: CatalogItem[] = [
     id: 1,
     name: 'ACRS',
     icon: 'f/f3/Flag_of_Russia.svg',
-    description: 'Addiction Classification and Reflective System',
+    description: 'Addiction Classification and Rehab System',
     category: 'Position Classification, Recruiting, Hiring'
   },
   {
@@ -26,7 +26,7 @@ export const CatalogItems: CatalogItem[] = [
     id: 4,
     name: 'BATS',
     icon: '5/5c/Flag_of_Portugal.svg',
-    description: 'Baby Advices Translation System',
+    description: 'Baby Advices Tracking System',
     category: 'Enterprise Support'
   },
   {

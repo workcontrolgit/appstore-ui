@@ -11,7 +11,7 @@ export const CatalogItems: CatalogItem[] = [
   {
     id: 2,
     name: 'ERP',
-    icon: 'fas fa-assistive-listening-systems',
+    icon: 'fas fa-headphones',
     description: 'Earwax Research Portal',
     category: 'Benefits, Retirement'
   },
@@ -25,7 +25,7 @@ export const CatalogItems: CatalogItem[] = [
   {
     id: 4,
     name: 'BATS',
-    icon: 'fas fa-angry',
+    icon: 'fas fa-flushed',
     description: 'Baby Advices Tracking System',
     category: 'Enterprise Support'
   },
@@ -39,7 +39,7 @@ export const CatalogItems: CatalogItem[] = [
   {
     id: 6,
     name: 'GEMS',
-    icon: 'fas fa-diagnoses',
+    icon: 'fas fa-female',
     description: 'Girls Educational and Mentoring Services',
     category: 'Personnel Actions'
   },
@@ -53,7 +53,7 @@ export const CatalogItems: CatalogItem[] = [
   {
     id: 8,
     name: 'EAPS',
-    icon: 'fas fa-boxes',
+    icon: 'fas fa-euro-sign',
     description: 'European Academy of Paediatric Societies',
     category: 'Workforce Planning, Analytics'
   },
@@ -67,7 +67,7 @@ export const CatalogItems: CatalogItem[] = [
   {
     id: 10,
     name: 'MCLASS',
-    icon: 'fas fa-chart-bar',
+    icon: 'fas fa-cloud-meatball',
     description: 'Macaroni Classification',
     category: 'Position Classification, Recruiting, Hiring'
   },
@@ -88,7 +88,7 @@ export const CatalogItems: CatalogItem[] = [
   {
     id: 13,
     name: 'EP',
-    icon: 'fas fa-chess',
+    icon: 'fab fa-paypal',
     description: 'Extended Play',
     category: 'Personnel Actions'
   }

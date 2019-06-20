@@ -19,10 +19,11 @@
         <tbody>
           <tr *ngFor="let item of catalogitems$ | async">
             <th scope="row">{{ item.id }}</th>
-            <td (click)="open(item)"> <span class="text-nowrap btn">
+            <td (click)="open(item)">
+              <div class="text-nowrap cursor-pointer">
                 <i class="{{item.icon}}"></i>
                 <ngb-highlight [result]="item.name" [term]="service.searchTerm"></ngb-highlight>
-              </span>
+              </div>
             </td>
             <td>
               <ngb-highlight [result]="item.description" [term]="service.searchTerm"></ngb-highlight>

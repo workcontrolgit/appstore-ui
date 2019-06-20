@@ -19,10 +19,10 @@
         <tbody>
           <tr *ngFor="let item of catalogitems$ | async">
             <th scope="row">{{ item.id }}</th>
-            <td (click)="open(item)">
-              <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + item.icon" class="mr-2"
-                style="width: 20px">
-              <ngb-highlight [result]="item.name" [term]="service.searchTerm"></ngb-highlight>
+            <td (click)="open(item)"> <span class="text-nowrap btn">
+                <i class="{{item.icon}}"></i>
+                <ngb-highlight [result]="item.name" [term]="service.searchTerm"></ngb-highlight>
+              </span>
             </td>
             <td>
               <ngb-highlight [result]="item.description" [term]="service.searchTerm"></ngb-highlight>
@@ -50,7 +50,7 @@
   </form>
 
 
-  <div class="card">
+  <!-- <div class="card">
     <div class="card-header">
       Help
     </div>
@@ -61,8 +61,8 @@
       <p class="text-muted">This is a demo wireframe.  The prototype illustrates sorting, pagination and filtering in an asynchronous manner.
       It is based on observables and simulates debouncing and a custom delay for the data fetch.</p>
     </div>
-  </div>
-<!-- 
+  </div> -->
+  <!-- 
   <p>
     <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
             [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
@@ -76,5 +76,5 @@
       </div>
     </div>
   </div> -->
-  
+
 </div>

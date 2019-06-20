@@ -4,91 +4,91 @@ export const CatalogItems: CatalogItem[] = [
   {
     id: 1,
     name: 'ACRS',
-    icon: 'f/f3/Flag_of_Russia.svg',
+    icon: 'fab fa-adn',
     description: 'Addiction Classification and Rehab System',
     category: 'Position Classification, Recruiting, Hiring'
   },
   {
     id: 2,
     name: 'ERP',
-    icon: 'c/c3/Flag_of_France.svg',
+    icon: 'fas fa-assistive-listening-systems',
     description: 'Earwax Research Portal',
     category: 'Benefits, Retirement'
   },
   {
     id: 3,
     name: 'GADTRK',
-    icon: 'b/ba/Flag_of_Germany.svg',
+    icon: 'fas fa-atom',
     description: 'Glucose Appeals and Decision Actions Tracking System',
     category: 'Employee Labor Relations, Reasonable Accommodations'
   },
   {
     id: 4,
     name: 'BATS',
-    icon: '5/5c/Flag_of_Portugal.svg',
+    icon: 'fas fa-angry',
     description: 'Baby Advices Tracking System',
     category: 'Enterprise Support'
   },
   {
     id: 5,
     name: 'BMA',
-    icon: 'c/cf/Flag_of_Canada.svg',
+    icon: 'fas fa-award',
     description: 'Bandage Marketing Association',
     category: 'Performance Management'
   },
   {
     id: 6,
     name: 'GEMS',
-    icon: '2/21/Flag_of_Vietnam.svg',
+    icon: 'fas fa-diagnoses',
     description: 'Girls Educational and Mentoring Services',
     category: 'Personnel Actions'
   },
   {
     id: 7,
     name: 'PCS TV',
-    icon: '0/05/Flag_of_Brazil.svg',
+    icon: 'fas fa-beer',
     description: 'Pacemaker Control Safe Transfer Vehicle',
     category: 'Travel'
   },
   {
     id: 8,
     name: 'EAPS',
-    icon: 'f/fc/Flag_of_Mexico.svg',
+    icon: 'fas fa-boxes',
     description: 'European Academy of Paediatric Societies',
     category: 'Workforce Planning, Analytics'
   },
   {
     id: 9,
     name: 'REETA',
-    icon: 'a/a4/Flag_of_the_United_States.svg',
+    icon: 'fas fa-cannabis',
     description: 'Raptor Express Evacuation Tracking Application',
     category: 'Position Classification, Recruiting, Hiring'
   },
   {
     id: 10,
     name: 'MCLASS',
-    icon: '4/41/Flag_of_India.svg',
+    icon: 'fas fa-chart-bar',
     description: 'Macaroni Classification',
     category: 'Position Classification, Recruiting, Hiring'
   },
   {
     id: 11,
     name: 'SLRP',
-    icon: '9/9f/Flag_of_Indonesia.svg',
+    icon: 'fas fa-certificate',
     description: 'Sanitation Logistics Research Program',
     category: 'Benefits, Retirement'
   },
   {
     id: 12,
     name: 'TIC/TIS',
-    icon: '3/38/Flag_of_Tuvalu.svg',
+    icon: 'fas fa-chess-queen',
     description: 'Time-in-Class / Time-in-Service',
     category: 'Performance Management'
   },
   {
     id: 13,
     name: 'EP',
-    icon: 'f/fa/Flag_of_the_People%27s_Republic_of_China.svg',
+    icon: 'fas fa-chess',
     description: 'Extended Play',
     category: 'Personnel Actions'
   }

@@ -28,6 +28,7 @@
               "src/robots.txt",
               "src/manifest.json",
               "src/assets",
+              "src/web.config",
               "src/_redirects"
             ],
             "styles": [

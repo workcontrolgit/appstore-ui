@@ -3,11 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { extract } from '@app/core';
 import { Shell } from '@app/shell/shell.service';
-import { NgbdCatalog } from './catalog.component';
+import { NgbdCatalogComponent } from './catalog.component';
 
 const routes: Routes = [
   Shell.childRoutes([
-    { path: 'catalog', component: NgbdCatalog, data: { title: extract('Catalog') } }
+    { path: 'catalog', component: NgbdCatalogComponent, data: { title: extract('Catalog') } }
   ])
 ];
 
@@ -16,6 +16,5 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class TableRoutingModule { 
-  
+export class TableRoutingModule {
 }

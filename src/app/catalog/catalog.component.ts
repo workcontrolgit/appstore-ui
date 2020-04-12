@@ -24,7 +24,7 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
     </div>
   `
 })
-export class NgbdModalContent {
+export class NgbdModalContentComponent {
   @Input() name: any;
   public isCollapsed = false;
 
@@ -36,7 +36,7 @@ export class NgbdModalContent {
     selector: 'ngbd-catalog', templateUrl: './catalog.component.html',
     styleUrls: ['./catalog.component.scss'], providers: [CatalogItemService, DecimalPipe]
   })
-export class NgbdCatalog {
+export class NgbdCatalogComponent {
   catalogitems$: Observable<CatalogItem[]>;
   total$: Observable<number>;
 
@@ -64,8 +64,8 @@ export class NgbdCatalog {
   //   window.location.href="http://www.google.com";
   //   }
 
-    open(item:any) {
-      const modalRef = this.modalService.open(NgbdModalContent, { size: 'sm' });
+    open(item: any) {
+      const modalRef = this.modalService.open(NgbdModalContentComponent, { size: 'sm' });
       modalRef.componentInstance.name = item.name;
     }    
 

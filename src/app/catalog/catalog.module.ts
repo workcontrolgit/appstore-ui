@@ -7,7 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TableRoutingModule } from './catalog-routing.module';
 
 import { NgbdSortableHeader } from './sortable.directive';
-import { NgbdCatalog, NgbdModalContent } from './catalog.component';
+import { NgbdCatalogComponent, NgbdModalContentComponent } from './catalog.component';
 
 @NgModule({
   imports: [
@@ -18,8 +18,8 @@ import { NgbdCatalog, NgbdModalContent } from './catalog.component';
     TableRoutingModule,
     NgbModule
   ],
-  declarations: [NgbdCatalog, NgbdModalContent, NgbdSortableHeader],
-  exports: [NgbdCatalog, NgbdModalContent],
-  bootstrap: [NgbdCatalog, NgbdModalContent]
+  declarations: [NgbdCatalogComponent, NgbdModalContentComponent, NgbdSortableHeader],
+  exports: [NgbdCatalogComponent, NgbdModalContentComponent],
+  bootstrap: [NgbdCatalogComponent, NgbdModalContentComponent]
 })
 export class NgbdCatalogModule {}
